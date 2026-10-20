@@ -60,7 +60,6 @@ final class TeamController extends AbstractController
     public function create(
         #[MapRequestPayload(serializationContext: self::WRITE)] Team $team
     ): JsonResponse {
-	    dump($team);
         $this->em->persist($team);
         $this->em->flush();
 
